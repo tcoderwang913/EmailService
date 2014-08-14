@@ -28,6 +28,16 @@ Requirement to use
 In order to send the emails with Mailgun or Mandrill, you need to first create accounts with these two Email service providers.
 You can then update the login information in mailgun_send_email.py and mandrill_send_email.py.
 
+Usage
+=====
+You can download or fork the branch to your local machine, then go the EmailService directory, type:
+       
+       python email_app.py 
+
+in the terminal. 
+
+After providing "To","Subject" and "Attachments" as well as text message body, you can click the send button to send the emails.
+
 
 Limitations
 ===========
