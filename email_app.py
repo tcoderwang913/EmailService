@@ -1,12 +1,3 @@
-#################
-#This program implements the following interface
-# To: [Text field including the recipient's email address]
-# Subject: [Text field that includes the title of the email]
-# Attach:  name of file for attachments
-# Text field that includes that email body
-# author: song wang (songwanguvm07@gmail.com)
-#################
-
 from Tkinter import *
 from mailgun_send_email import *
 from mandrill_send_email import *
