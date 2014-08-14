@@ -7,16 +7,19 @@ Email service providers: Mailgun and Mandrill. It is coded in python.
 
 Major components and functionalities
 ====================================
+
+
 It comprises two major components:
-1. A GUI that users use to input relevant email information such as:
+1) A GUI that users use to input relevant email information such as:
 
      1.a) To: the recipient email address
      1.b) Subject: subject of the email
      1.c) Attach: the name of the file you would like to attach as attachment
      1.d) A textbox that users input text messages
      1.e) After all the above necessary information are filled, simply click the "Send" button, it will send the email to
-         the recipient specified in the "To" field
-2. The backend that handles the email sending service. It relies on the two email service providers and the Python Email and SMTP library.
+     the recipient specified in the "To" field
+
+2)The backend that handles the email sending service. It relies on the two email service providers and the Python Email and SMTP library.
 
 In other words, all emails are sent by SMTP. The reason for choosing SMTP is because Python has a solid library that supports this protocol
 and it is simple to use. The user of the service is hidden from which service provider is being used underlyingly. When one of the Email 
