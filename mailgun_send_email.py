@@ -19,7 +19,6 @@ class sendEmail_Mailgun():
 
         for inputFileName in fileList:
             self.attachmentPart = MIMEBase('application', "octet-stream")
-            print 'input file name', inputFileName
             self.attachmentPart.set_payload(open(inputFileName, "rb").read())
             Encoders.encode_base64(self.attachmentPart)
             self.attachmentPart.add_header('Content-Disposition', 'attachment', filename =inputFileName)
