@@ -11,7 +11,7 @@ class sendEmail_Mandrill():
     def send(self,subject, dest,message,fileList):
         self.msg = MIMEMultipart()
         self.msg['Subject'] = subject;
-        self.msg['From'] = "songwanguvm07@gmail.com"
+        self.msg['From'] = "example@gmail.com"
         self.msg['To'] = dest
 
         self.textMessagePart = MIMEText(message)
@@ -27,7 +27,7 @@ class sendEmail_Mandrill():
         s = smtplib.SMTP('smtp.mandrillapp.com', 587)
 
         #to use, change this to your own login credentials
-        s.login('songwanguvm07@gmail.com', 'S_2Upi9mZEd6yOdAYk9WwA')
+        s.login('example@gmail.com', 'S_2Upi9mZEd6yOdAYk9WwA')
         s.sendmail(self.msg['From'], self.msg['To'], self.msg.as_string())
         s.quit()
 
