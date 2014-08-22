@@ -11,7 +11,7 @@ class sendEmail_Mailgun():
     def send(self,subject, dest,message, fileList):
     	self.msg = MIMEMultipart()
         self.msg['Subject'] = subject;
-        self.msg['From'] = "songwanguvm07@gmail.com"
+        self.msg['From'] = "example@gmail.com"
         self.msg['To'] = dest
        
         self.textMessagePart = MIMEText(message)
@@ -27,7 +27,7 @@ class sendEmail_Mailgun():
         s = smtplib.SMTP('smtp.mailgun.org', 587)
 
         #to use, change this to your own login credentials
-        s.login('postmaster@sandbox15b9ad7102f3452bbeacf59a0fecc479.mailgun.org', '2ccf6863bba6d62bbcaa28a0249ca743')
+        s.login('credential example', '2ccf6863bba6d62bbcaa28a0249ca743')
         s.sendmail(self.msg['From'], self.msg['To'], self.msg.as_string())
         s.quit()
 
